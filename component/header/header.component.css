@@ -1,0 +1,58 @@
+header {
+    background-color: #ee8b28;
+    padding: 10px;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .right-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  .search-container input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .search-container button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cart-container,
+  .logout-container {
+    margin-left: 10px;
+  }
+  
+  .cart-container i {
+    font-size: 40px;
+    color: #330c62;
+  }
+  
+  .logout-container button {
+    padding: 5px 10px;
+    background-color: #cd2533;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  
+  

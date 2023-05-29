@@ -1,0 +1,71 @@
+<input #checkbox1 type="checkbox" name="toggle" id="toggle">
+<label for="toggle"></label>
+<div class="container">
+
+</div>
+<div class="formAdd">
+<form autocomplete="off" #myform="ngForm" (ngSubmit)="myform.form.valid && submit(myform)">
+    <div class="container">
+        <div class="row">
+
+
+            <div class="col-md-3">
+                
+                
+                <label for="name">Product Id</label>
+                <!--<p class="text-danger">Required</p>-->
+                <input type="number" name="productId" class="form-control" placeholder="Enter Product Id" #productId="ngModel" [(ngModel)]="proService.productData.productId" required>
+            </div>
+
+
+            <div class="col-md-3">
+                
+                
+                <label for="name">Product Name</label>
+                <!--<p class="text-danger">Required</p>-->
+                <input type="text" name="productName" class="form-control" placeholder="Enter Product Name" #productName="ngModel" [(ngModel)]="proService.productData.productName"required>
+            </div>
+
+
+            <div class="col-md-3">
+                <!--<input type="hidden" name="id" [value]="proService.productData.categoryId">-->
+                <label for="name">Product Price</label>
+                <!--<p class="text-danger">Required</p>-->
+                <input type="number" name="productPrice" class="form-control" placeholder="Enter price" #productPrice="ngModel" [(ngModel)]="proService.productData.productPrice"required >
+            </div>
+
+
+            <div class="col-md-3">
+                <!--<input type="hidden" name="id" [value]="proService.productData.categoryId">-->
+                <label for="name">Product Quantity</label>
+                <!--<p class="text-danger">Required</p>-->
+                <input type="number" name="productQuantity" class="form-control" placeholder="Enter product quantity" #productQuantity="ngModel" [(ngModel)]="proService.productData.productQuantity"required >
+            </div>
+
+
+            <div class="col-md-3">
+                <!--<input type="hidden" name="id" [value]="proService.productData.categoryId">-->
+                <label for="name">Category Id</label>
+                <!--<p class="text-danger">Required</p>-->
+                <select name="categoryId" class="form-control" placeholder="select Category Id"  #categoryId="ngModel" [(ngModel)]="proService.productData.categoryId" required>
+                    <option value="">Please Select</option>
+                    <option value="1">Category 1</option>
+  <option value="2">Category 2</option>
+  <option value="3">Category 3</option>
+                </select>
+            </div>
+            
+        </div>
+         <div class="row">
+            <div class="col-md-8"></div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-success btn-block">Save</button>
+            </div>
+            <div class="col-md-2">
+                <button type="reset" class="btn btn-danger btn-block">Cancel</button>
+            </div>
+
+         </div>
+    </div>
+</form>
+</div>

@@ -1,0 +1,101 @@
+<!--<p>login works!</p>
+<h2>Login</h2>
+
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+  <div>
+    <label for="username">Username:</label>
+    <input type="text" id="username" formControlName="username">
+    <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
+      <small class="text-danger">Username is required.</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" formControlName="password">
+    <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+      <small class="text-danger">Password is required.</small>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="loginForm.invalid">Login</button>
+</form>-->
+
+
+
+
+<div class="outer">
+  <div class="container ">
+      <div class="row">
+          <div class="d-flex justify-content-center align-items-center vh-100">
+              <div class="panel border text-center ">
+                  <div class="panel-heading">
+                      <h3 class="pt-3 font-weight-bold h ">LOGIN</h3>
+                  </div>
+                  <div class="panel-body p-3">
+                      <form [formGroup]="loginForm">
+
+                          <div class="form-group pt-3">
+                              <div class="input-field">
+                                  <span class="fa fa-user p-2"></span>
+                                  <input formControlName="username" type="text" placeholder="UserName">
+                              </div>
+                          </div>
+                          <!--<small *ngIf=" loginForm.hasError('required', 'Username')" class="text-danger">
+                              "UserName is required"
+                          </small>-->
+                          <!--<small *ngIf="username?.invalid && (username?.dirty || username?.touched)" class="text-danger">
+                              <span *ngIf="username?.errors?.['required']">UserName is required.</span>
+                            </small>-->
+                          <div class="form-group pt-3">
+                              <div class="input-field">
+                                  <span class="fa fa-lock p-2"></span>
+                                  <input formControlName="password" [type]="type" placeholder="Password ">
+                              </div>
+                          </div>
+                          <!--<small *ngIf="loginForm.controls['Password'].dirty && loginForm.hasError('required', 'Password')" class="text-danger">
+                              "Password is required"
+                          </small>-->
+                          <!--<small *ngIf="loginForm.controls['Password'].hasError('pattern') && loginForm.controls['Password'].touched" class="text-danger">
+                              Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one numeric value, and one special character.
+                            </small>-->
+                          <!--<small *ngIf="contactNumber?.invalid && (contactNumber?.dirty || contactNumber?.touched)" class="text-danger">
+                              <span *ngIf="contactNumber?.errors?.['required']">Contact Number is required.</span>
+                              <span *ngIf="contactNumber?.errors?.['pattern']">Contact Number must be a valid 10-digit number.</span>
+                            </small>-->
+                          <!--<div class="form-group pt-3">
+                              <div class="input-field">
+                                  <span class="fa fa-user p-2"></span>
+                                  <input button="email"type="email" placeholder="Your Email">
+                              </div>
+                          </div>-->
+                          <!--<small *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="text-danger">
+                              <span *ngIf="email?.errors?.['required']">Email is required.</span>
+                              <span *ngIf="email?.errors?.['email']">Invalid email format.</span>
+                            </small>-->
+                          <!--<div class="form-group pt-3">
+                              <div class="input-field">
+                                  <span class="fa fa-lock p-2"></span>
+                                  <input formControl="password" [type]="password" placeholder="Your Password">
+                              </div>
+                          </div>-->
+                          
+                          <!--<small *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="text-danger">
+                              <span *ngIf="password?.errors?.['required']">Password is required.</span>
+                              <span *ngIf="password?.errors?.['pattern']">Password must be at least 8 characters long and <br>contain at least one letter and one number.</span>
+                          </small>-->
+                          
+                          <button (click)="login()" type="submit" class="btn btn-success btn-block mt-4 w-100">LogIn</button>
+                          <!--<div class="text-center pt-4 text-muted ">Already have an account? <a id="forget"
+                                  routerLink="/login">LogIn</a>-->
+                          <!--</div>-->
+                      </form>
+                  </div>
+              </div>
+
+          </div>
+      </div>    
+  </div>
+
+
+

@@ -1,0 +1,40 @@
+<div class="container">
+    <app-product-form></app-product-form>
+</div>
+
+
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>Product Id</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Quantity</th>
+            <th>Category Id</th>
+            <th>Actions</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pro of proService.listproduct">
+            <td>{{pro.productId}}</td>
+            <td>{{pro.productName}}</td>
+            <td>{{pro.productPrice}}</td>
+            <td>{{pro.productQuantity}}</td>
+            <td>{{pro.categoryId}}</td>
+            <td>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Chooose your action
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <!--<a class="dropdown-item" href="#">Add</a>-->
+                      <a class="dropdown-item" href="#" (click)="populateProduct(pro)">Edit</a>
+                      <a class="dropdown-item" href="#" (click)="delete(pro.productId)">Delete</a>
+                    </div>
+                  </div> 
+            </td>
+        </tr>
+    </tbody>
+</table>    
